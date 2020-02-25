@@ -22,7 +22,7 @@ export class MvTextarea extends LitElement {
         --margin: var(--mv-textarea-margin, 0);
         --border: var(--mv-textarea-border, 1px solid #4E686D);
         --active-border: var(--mv-textarea-active-border, 1px solid #1D9BC9);
-        --placeholder-color: var(--mv-textarea-placeholder-color, #80828C, 16px);
+        --placeholder-color: var(--mv-textarea-placeholder-color, #80828C);
         --active-box-shadow: var(--mv-textarea-active-box-shadow, inset 0 0 9px 0 rgba(29, 155, 201, 0.3));
         --error-border: var(--mv-textarea-error-border, 1px solid rgba(247, 112, 98, 1));
         --error-box-shadow: var(--mv-textarea-error-box-shadow, inset 0 0 9px 0 rgba(229, 47, 47, 0.3));
