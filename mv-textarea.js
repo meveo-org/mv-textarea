@@ -13,9 +13,9 @@ export class MvTextarea extends LitElement {
 
   static get styles() {
     return css`
-			:host {
-				--font-family: var(--mv-textarea-font-family, MuseoSans);
-				--font-size: var(--font-size-m, 16px);
+      :host {
+        --font-family: var(--mv-textarea-font-family, MuseoSans);
+        --font-size: var(--font-size-m, 16px);
         --color: var(--mv-textarea-color, #818181);
         --width: var(--mv-textarea-width, 620px);
         --height: var(--mv-textarea-height, 153px);    
@@ -29,7 +29,7 @@ export class MvTextarea extends LitElement {
         --box-radius: 5px;
         --box-padding: 11px 8px;
       }
-
+      
       textarea {
         color: var(--color);
         font-family: var(--font-family);
@@ -100,7 +100,7 @@ export class MvTextarea extends LitElement {
       .mv-textarea.error textarea::-webkit-scrollbar-thumb {
         background-color: rgba(247, 112, 98, 1);
       }
-		`;
+    `;
   }
 
   constructor() {
