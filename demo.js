@@ -32,9 +32,9 @@ export class MvTextarea extends LitElement {
         width: 120px;
         margin-left: 10px;
         border:2px solid red;
-        -moz-border-radius:8px;
-        -webkit-border-radius:8px;	
-        border-radius:8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;	
+        border-radius: 8px;
         color: #818181;
       }
       
@@ -52,15 +52,14 @@ export class MvTextarea extends LitElement {
   }
 
   render() {
-    const isLightTheme = this.theme === "light";
-    const textColor = `color: ${isLightTheme ? "" : "#FFFFFF"}`;
+    const { theme } = this;
     return html`
       <fieldset>
         <legend>Theme</legend>
-        <label><input type="radio" name="theme" value="light" checked @change="${this.radioChange}" />Light</label>
-        <label><input type="radio" name="theme" value="dark" @change="${this.radioChange}" />Dark</label>
+        <label><input type="radio" name="theme" value="light" checked @change="${this.changeTheme}" />Light</label>
+        <label><input type="radio" name="theme" value="dark" @change="${this.changeTheme}" />Dark</label>
       </fieldset>
-      <mv-container .theme="${this.theme}" style="${textColor}">
+      <mv-container .theme="${theme}">
         <h2>Default</h2>
         <mv-textarea
           name="default"
@@ -77,7 +76,7 @@ export class MvTextarea extends LitElement {
         ></mv-textarea>
 
       </mv-container>
-      <mv-container .theme="${this.theme}" style="${textColor}">
+      <mv-container .theme="${theme}">
         <pre>${JSON.stringify(this.detail, null, 4)}</pre>
       </mv-container>
     `;
@@ -88,13 +87,9 @@ export class MvTextarea extends LitElement {
     this.detail = detail;
   };
 
-  radioChange = originalEvent => {
+  changeTheme = originalEvent => {
     const { target: { value } } = originalEvent;
-    if (value === "light") {
-      this.theme = "light";
-    } else {
-      this.theme = "dark";
-    }
+    this.theme = value;
   };
 }
 

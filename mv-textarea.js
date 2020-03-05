@@ -14,8 +14,8 @@ export class MvTextarea extends LitElement {
   static get styles() {
     return css`
       :host {
-        --font-family: var(--mv-textarea-font-family, MuseoSans);
-        --font-size: var(--font-size-m, 16px);
+        --mv-textarea-font-family: var(--font-family, MuseoSans);
+        --mv-textarea-font-size: var(--font-size-m, 16px);
         --color: var(--mv-textarea-color, #818181);
         --width: var(--mv-textarea-width, 620px);
         --height: var(--mv-textarea-height, 153px);    
@@ -32,8 +32,8 @@ export class MvTextarea extends LitElement {
       
       textarea {
         color: var(--color);
-        font-family: var(--font-family);
-        font-size: var(--font-size);
+        font-family: var(--mv-textarea-font-family);
+        font-size: var(--mv-textarea-font-size);
         background-color: transparent;
         border: none;
         outline: none;
