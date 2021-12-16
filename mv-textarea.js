@@ -39,7 +39,7 @@ export class MvTextarea extends LitElement {
         outline: none;
         padding: 0 8px;
         resize: none;
-        width: var(--width);
+        width: 100%;
         height: var(--height);
         // fallback for firefox
         scrollbar-color: #5A6473 #788394;
