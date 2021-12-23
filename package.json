@@ -1,0 +1,22 @@
+{
+  "name": "@meveo-org/mv-textarea",
+  "version": "1.0.0",
+  "description": "MvTextarea is a Meveo textarea component based on lit-element.",
+  "main": "mv-textarea.js",
+  "scripts": {
+    "serve": "es-dev-server --node-resolve --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meveo-org/mv-textarea.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meveo-org/mv-textarea/issues"
+  },
+  "homepage": "https://github.com/meveo-org/mv-textarea#readme",
+  "devDependencies": {
+    "es-dev-server": "^1.46.1"
+  }
+}
